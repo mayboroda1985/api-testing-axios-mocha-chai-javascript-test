@@ -4,9 +4,10 @@ const { faker } = require("@faker-js/faker");
 
 describe("PUT API Request Tests", async () => {
     it("should be able update a user", async () => {
-        const randomName = faker.name.findName();
+        
+        const randomName = faker.name.fullName();
         const randomJobTitle = faker.name.jobTitle();
-        const res = await axios.put('https://reqres.in/api/users/2',
+        const res = await axios.put('https://reqres.in/api/users/737',
             {
                 "name": randomName,
                 "job": randomJobTitle
@@ -14,6 +15,6 @@ describe("PUT API Request Tests", async () => {
         ).then(res => res.data)
         console.log(res);
         expect(res.name).equal(randomName);
-        expect(res.job).equal(randomJobTitle);
+         expect(res.job).equal(randomJobTitle);
     })
-})
+});
