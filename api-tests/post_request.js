@@ -21,7 +21,7 @@ describe("POST API Request Tests", async () => {
 
 
     it('should create a new user with createdAt date in the correct format', async () => {
-        const randomName = faker.iname.fullName();
+        const randomName = faker.name.fullName();
         const randomJobTitle = faker.name.jobTitle();
         const response = await axios.post('https://reqres.in/api/users', {
             "name": randomName,
@@ -36,7 +36,7 @@ describe("POST API Request Tests", async () => {
        it('Handle with errror message : should create a new user with createdAt date in the correct format', async () => {
 
        try {
-        const randomName = faker.iname.fullName();
+        const randomName = faker.name.fullName();
         const randomJobTitle = faker.name.jobTitle();
         const response = await axios.post('https://reqres.in/api/users', {
             "name": randomName,
@@ -52,7 +52,7 @@ describe("POST API Request Tests", async () => {
       }
     });
 
-    it.only('Should extract user Id ', async () => {
+    it('Should extract user Id ', async () => {
 
             const randomName = faker.name.fullName();
             const randomJobTitle = faker.name.jobTitle();

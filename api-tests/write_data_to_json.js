@@ -6,7 +6,7 @@ const fs = require("fs");
 
 describe("Write Data Tests", async () => {
     it.skip("should be able write data to JSON", async () => {
-        const randomName = faker.name.findName();
+        const randomName = faker.name.fullName();
         const randomJobTitle = faker.name.jobTitle();
         const res = await axios.post('https://reqres.in/api/users',
             {
